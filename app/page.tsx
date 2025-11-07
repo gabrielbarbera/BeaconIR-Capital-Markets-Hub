@@ -12,7 +12,8 @@ export default function DemoPage() {
   };
 
   // Capital Markets Hub component structure
-  const components = [
+  // Define as const to ensure it's properly typed during static generation
+  const components: Array<{ type: string; props?: any }> = [
     { type: "hero", props: { metrics: { marketCap: mockCompany.marketCap, ticker: mockCompany.tickerSymbol }, marketData: mockMarketData } },
     { type: "kpis", props: { kpis: mockKPIs } },
     { type: "filings", props: { filings: mockFilings } },
